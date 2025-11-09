@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 
 // API Base URL
-const API_BASE_URL = "http://localhost:3000/api";
+const API_BASE_URL = "https://onefi-emi-platform.onrender.com";
 
 // ProductsPage Component - List of all products
 const ProductsPage = () => {
