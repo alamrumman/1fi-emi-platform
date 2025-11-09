@@ -33,7 +33,7 @@ const ProductDetail = () => {
           return;
         }
 
-        const response = await fetch(`${API_BASE_URL}/products/${productId}`);
+        const response = await fetch(`${API_BASE_URL}/api/products/${productId}`);
         const result = await response.json();
 
         console.log("Product detail response:", result); // Debug

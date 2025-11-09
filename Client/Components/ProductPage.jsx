@@ -22,7 +22,7 @@ const ProductsPage = () => {
         setLoading(true);
         setError(null);
 
-        const response = await fetch(`${API_BASE_URL}/products`);
+        const response = await fetch(`${API_BASE_URL}/api/products`);
         const result = await response.json();
 
         if (result.success) {
