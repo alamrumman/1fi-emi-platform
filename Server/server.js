@@ -12,8 +12,27 @@ const productRoutes = require("./Routes/productRoutes");
 
 const app = express();
 
-// Middleware
-app.use(cors());
+const allowedOrigins = [
+  "http://localhost:5173", // for local dev (Vite)
+  "https://onefi-frontend.onrender.com", //  Render frontend URL
+];
+
+// ✅ CORS configuration
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      // Allow requests with no origin (like mobile apps or curl)
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true, // allows cookies or authorization headers
+  })
+);
+
 app.use(express.json());
 
 // Connect to MongoDB
