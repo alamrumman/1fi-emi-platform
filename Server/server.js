@@ -14,7 +14,7 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:5173", // for local dev (Vite)
-  "https://onefi-frontend.onrender.com", //  Render frontend URL
+  "https://onefi-emi-platform-qfen.onrender.com", //  Render frontend URL
 ];
 
 // ✅ CORS configuration
