@@ -49,6 +49,7 @@ const ProductsPage = () => {
         <div className="text-center">
           <div className="w-16 h-16 border-4 border-violet-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
           <p className="text-gray-400">Loading products...</p>
+          <p className="text-gray-400">First load takes time </p>
         </div>
       </div>
     );
